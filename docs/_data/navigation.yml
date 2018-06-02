@@ -1,7 +1,7 @@
 # main links
 main:
   - title: "Categories"
-    url: https://allchani.github.io/allchani_lab/categories/
+    url: /categories/
   - title: "Archive"
     url: /year-archive/
   - title: "Tag"
