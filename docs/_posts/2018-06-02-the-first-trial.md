@@ -1,5 +1,5 @@
 ---
-layout : default
+layout : single
 title : 첫글
 categories : 
     - Daily
