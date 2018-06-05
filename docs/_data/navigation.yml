@@ -1,5 +1,7 @@
 # main links
 main:
+  - title: "Note Collections"
+    url: /collection-archive/
   - title: "Categories"
     url: /categories/
   - title: "Archive"
