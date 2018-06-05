@@ -261,6 +261,12 @@ compress_html:
   ignore:
     envs: development
 
+# Collections
+collections:
+  lecture-note01:
+    output: true
+    permalink: /:collection/:path/
+
 
 # Defaults
 defaults:
@@ -282,18 +288,18 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # _docs
+  # _lecture-note01
   - scope:
       path: ""
-      type: docs
+      type: lecture-note01
     values:
       layout: single
-      read_time: false
-      author_profile: false
-      share: false
-      comments: false
+      read_time: true
+      author_profile: true
+      share: true
+      comments: true
       sidebar:
-        nav: "docs"
+        nav: "lecture-note01"
   # _recipes
   - scope:
       path: ""
