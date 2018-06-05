@@ -1,9 +1,9 @@
 # main links
 main:
-  - title: "Note Collections"
-    url: /collection-archive/
   - title: "Categories"
     url: /categories/
+  - title: "Note Collections"
+    url: /collection-archive/
   - title: "Archive"
     url: /year-archive/
   - title: "Tag"
