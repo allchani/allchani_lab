@@ -7,4 +7,4 @@ entries_layout: grid
 classes: wide
 ---
 
-Sample document listing for the collection `_lecture-note01`.
+KOCW 확률과 통계 강의 필기
