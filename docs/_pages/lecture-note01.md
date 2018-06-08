@@ -7,4 +7,4 @@ entries_layout: grid
 classes: wide
 ---
 
-KOCW 확률과 통계 강의 필기
+Udemy : Bayesian Machine Learning in Python: A/B Testing 노트필기
