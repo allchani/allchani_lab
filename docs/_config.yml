@@ -266,7 +266,9 @@ collections:
   lecture-note01:
     output: true
     permalink: /:collection/:path/
-
+  lecture-note02:
+    output: true
+    permalink: /:collection/:path/
 
 # Defaults
 defaults:
@@ -300,6 +302,18 @@ defaults:
       comments: true
       sidebar:
         nav: "lecture-note01"
+  # _lecture-note02
+  - scope:
+      path: ""
+      type: lecture-note02
+    values:
+      layout: single
+      read_time: true
+      author_profile: true
+      share: true
+      comments: true
+      sidebar:
+        nav: "lecture-note02"
   # _recipes
   - scope:
       path: ""
