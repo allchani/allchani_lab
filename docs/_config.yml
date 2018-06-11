@@ -314,6 +314,19 @@ defaults:
       comments: true
       sidebar:
         nav: "lecture-note02"
+  # _lecture-note03
+  - scope:
+      path: ""
+      type: lecture-note03
+    values:
+      layout: single
+      read_time: true
+      author_profile: true
+      share: true
+      comments: true
+      sidebar:
+        nav: "lecture-note03"
+
   # _recipes
   - scope:
       path: ""

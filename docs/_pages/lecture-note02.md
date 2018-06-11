@@ -7,4 +7,4 @@ entries_layout: grid
 classes: wide
 ---
 
-Udemy : The Complete Android N Developer Course 노트필기
+Udemy : The Complete Android N Developer Course notetaking

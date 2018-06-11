@@ -7,4 +7,4 @@ entries_layout: grid
 classes: wide
 ---
 
-Udemy : Bayesian Machine Learning in Python: A/B Testing 노트필기
+Udemy : Bayesian Machine Learning in Python: A/B Testing notetaking
