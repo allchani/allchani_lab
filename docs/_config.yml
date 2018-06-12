@@ -269,6 +269,9 @@ collections:
   lecture-note02:
     output: true
     permalink: /:collection/:path/
+  lecture-note03:
+    output: true
+    permalink: /:collection/:path/
 
 # Defaults
 defaults:
