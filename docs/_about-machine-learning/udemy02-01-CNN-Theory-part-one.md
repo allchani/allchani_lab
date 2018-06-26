@@ -1,6 +1,6 @@
 ---
-title: "CNN Theory part one" 
-excerpt: CNN Theory
+title: "[Udemy02] note01. CNN Theory part one" 
+excerpt: "Complete Guide to TensorFlow for Deep Learning with Python"
 mathjax : True
 tags : 
     - Udemy02
