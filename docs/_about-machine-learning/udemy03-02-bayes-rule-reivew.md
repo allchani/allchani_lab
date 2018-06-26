@@ -1,5 +1,5 @@
 ---
-title: "2 : Bayes Rule Review" 
+title: "[Udemy03] 02. Bayes Rule Review" 
 excerpt: Bayes Rule & Probability Review
 mathjax : True
 ---

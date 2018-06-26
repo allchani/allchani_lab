@@ -1,4 +1,6 @@
 ---
-title: "Buliding layout : Part 1" 
-excerpt: Udacity-android basics|user interface
+title: "[Udacity01] 01. Buliding layout : Part 1" 
+excerpt: "Android basics : user interface"
+tags : 
+    - Udacity01
 ---

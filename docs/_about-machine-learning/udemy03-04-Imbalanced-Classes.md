@@ -1,5 +1,5 @@
 ---
-title: "4 : Imbalanced Classes" 
+title: "[Udemy03] 04. Imbalanced Classes" 
 excerpt: Another scenario where Bayes rule comes into play
 mathjax : True
 ---

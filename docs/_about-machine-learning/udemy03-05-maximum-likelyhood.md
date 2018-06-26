@@ -1,5 +1,5 @@
 ---
-title: "5 : Maximum Likelyhood" 
+title: "[Udemy03] 05. Maximum Likelyhood" 
 excerpt: Mean of a Gaussian, Click-Through Rate
 mathjax : True
 ---

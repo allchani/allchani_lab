@@ -1,7 +1,9 @@
 ---
-title: "1 : Introduction and Outline" 
-excerpt: Introduction, Outline
+title: "[Udemy03] 01. Introduction and Outline" 
+excerpt: "Bayesian Machine Learning in Python: A/B TestingIntroduction, Outline"
 mathjax : false
+tags : 
+    - Udemy03
 ---
 # What's this course all about?
 

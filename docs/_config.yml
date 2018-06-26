@@ -263,18 +263,12 @@ compress_html:
 
 # Collections
 collections:
-  lecture-note01:
-    output: true
-    permalink: /:collection/:path/
   about-android-development:
     output: true
     permalink: /:collection/:path/
   about-machine-learning:
     output: true
     permalink: /:collection/:path/
-  lecture-note04:
-    output: true
-    permalink: /:collection/:path/  
 
 # Defaults
 defaults:
@@ -296,18 +290,6 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # _lecture-note01
-  - scope:
-      path: ""
-      type: lecture-note01
-    values:
-      layout: single
-      read_time: true
-      author_profile: true
-      share: true
-      comments: true
-      sidebar:
-        nav: "lecture-note01"
   # _about-android-development
   - scope:
       path: ""
@@ -332,18 +314,6 @@ defaults:
       comments: true
       sidebar:
         nav: "about-machine-learning"
-   # _lecture-note04
-  - scope:
-      path: ""
-      type: lecture-note04
-    values:
-      layout: single
-      read_time: true
-      author_profile: true
-      share: true
-      comments: true
-      sidebar:
-        nav: "lecture-note04"      
 
   # _recipes
   - scope:

@@ -2,6 +2,8 @@
 title: "CNN Theory part one" 
 excerpt: CNN Theory
 mathjax : True
+tags : 
+    - Udemy02
 ---
 
 - Just like the simple perceptron, CNNs also have their origins in biological research.

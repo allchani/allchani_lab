@@ -1,5 +1,5 @@
 ---
-title: "3 : Simple Probability Problem & Monty Hall Problem" 
+title: "[Udemy03] 03. Simple Probability Problem & Monty Hall Problem" 
 excerpt: Probability Exercise
 mathjax : True
 ---
