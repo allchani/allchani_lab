@@ -266,10 +266,10 @@ collections:
   lecture-note01:
     output: true
     permalink: /:collection/:path/
-  lecture-note02:
+  about-android-development:
     output: true
     permalink: /:collection/:path/
-  lecture-note03:
+  about-machine-learning:
     output: true
     permalink: /:collection/:path/
   lecture-note04:
@@ -308,10 +308,10 @@ defaults:
       comments: true
       sidebar:
         nav: "lecture-note01"
-  # _lecture-note02
+  # _about-android-development
   - scope:
       path: ""
-      type: lecture-note02
+      type: about-android-development
     values:
       layout: single
       read_time: true
@@ -319,11 +319,11 @@ defaults:
       share: true
       comments: true
       sidebar:
-        nav: "lecture-note02"
-  # _lecture-note03
+        nav: "about-android-development"
+  # _about-machine-learning
   - scope:
       path: ""
-      type: lecture-note03
+      type: about-machine-learning
     values:
       layout: single
       read_time: true
@@ -331,7 +331,7 @@ defaults:
       share: true
       comments: true
       sidebar:
-        nav: "lecture-note03"
+        nav: "about-machine-learning"
    # _lecture-note04
   - scope:
       path: ""
