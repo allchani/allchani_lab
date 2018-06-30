@@ -2,8 +2,6 @@
 title: "[Udemy01] 01. Introduction to Android Studio" 
 excerpt: The complete android N developer course-Introduction
 mathjax : false
-tags : 
-    - Udemy01
 ---
 
 ### 1. Install and make a new project but...

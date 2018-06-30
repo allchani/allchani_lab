@@ -2,8 +2,6 @@
 title: "[Udemy02] note01. CNN Theory part one" 
 excerpt: "Complete Guide to TensorFlow for Deep Learning with Python"
 mathjax : True
-tags : 
-    - Udemy02
 ---
 
 - Just like the simple perceptron, CNNs also have their origins in biological research.

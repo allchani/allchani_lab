@@ -2,8 +2,6 @@
 title: "[Udemy01] 00. Before Starting" 
 excerpt: The complete android N developer course-Asking great questions & Debugging
 mathjax : false
-tags : 
-    - Udemy01
 ---
 
 #### 1. Debug Your Code
