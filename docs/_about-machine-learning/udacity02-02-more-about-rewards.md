@@ -6,10 +6,10 @@ mathjax : True
 ## More about Rewards
 General observation about rewards and what makes the reinforcement learning MDP problem different from the supervised learning problems that we did before.
 
-|    --      |    --      |    --      |G+1      |
+|    --    |    --    |    --    |    G+1   |
 |:--------:|:--------:|:--------:|:--------:|
-|   --       | __B__|    --      |__N__-1 |
-| --|     --     |     --     |  --        |
+|    --    |   __B__  |    --    |  __N__-1 |
+|    --    |    --    |    --    |    --    |
 
 
 - delayed reward : not a idea of getting a reward at every state, it's an idea of getting delayed reward. So you don't know how your immediate action is going to lead to things down the road.

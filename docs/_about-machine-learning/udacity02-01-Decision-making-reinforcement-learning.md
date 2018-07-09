@@ -15,10 +15,11 @@ mathjax : True
     + reinforcement learning is one mechanism for doing decision making.
 
 ## Markov Decision Processes
-|          |          |          |G      |
+|          |          |          |G         |
 |:--------:|:--------:|:--------:|:--------:|
-|          | __B__|          |__N__ |
-| __S__|          |          |          |
+|          | __B__    |          | __N__    |
+| __S__    |          |          |          |
+
 - In this world we can go Up, Down, Right, Left.
 - Probabiliy an action happens : 0.8 
 - others 0.2 to move at a right angle direction.
@@ -26,10 +27,10 @@ mathjax : True
 ### Problem
 - States : S - represent something
     + ex) start state : (1,1) goal state(4,4) but we can state with everything like 1, 2, 3 or Fred mark Jason...
-- Model : T(s, a, s') ~ Pr(s'|s, a)
+- Model : T(s, a, s') ~ Pr(s' \| s, a)
     + T : transition function, 
     + s : state, a : action, a' : another state
-    + Pr(s'|s, a) : the probability that you will end up transitioning the state s', given that you were in state s, and you took action a.
+    + Pr(s' \| s, a) : the probability that you will end up transitioning the state s', given that you were in state s, and you took action a.
     + deterministic world vs non-deterministic(stochastic) world
 - Action : A(s), A
     + A(s) : the thing that you can do in a particular state
@@ -41,7 +42,7 @@ mathjax : True
 --------
 
 The Markovian property is that 
-- only the present matters. So, Pr(s'|s, a) is only depends on the current state.
+- only the present matters. So, Pr(s' \| s, a) is only depends on the current state.
 - things are stationary. (The rules don't change)
 
 ----
