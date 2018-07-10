@@ -51,15 +51,15 @@ General observation about rewards and what makes the reinforcement learning MDP 
         * stationarity of preferences. Even thoungh we don't have S0.
         * It will be the same, because all we're doing is adding the reward for S0. 
     + Math version
-        * $U({ S }_{ 0 },\quad { S }_{ 1 },\quad { S }_{ 2 }...)\quad =\quad \sum _{ t=0 }^{ \infty  }{ R( } { S }_{ t })$
+        * $U({ S }\_{ 0 },\quad { S }\_{ 1 },\quad { S }\_{ 2 }...)\quad =\quad \sum \_{ t=0 }^{ \infty  }{ R( } { S }\_{ t })$
             - +1 +1 +1 +1 +1 +1 +1 ....
             - +1 +1 +1 +2 +1 +1 +2 ....
                 + which is better?
                     * we can't compare because the utility of both of those sequences is equally infinite!! So same.
-        * = $\sum _{ t=0 }^{ \infty  }{ \gamma  } ^{ t }{ R( }{ S }_{ t })$
+        * = $\sum \_{ t=0 }^{ \infty  }{ \gamma  } ^{ t }{ R( }{ S }\_{ t })$
             - $0\quad \le \quad \gamma \quad <\quad 1$
             - It dosen't exponentially blow up. It exponencially implodes.
-        * $\le \sum _{ t=0 }^{ \infty  }{ { \gamma  }^{ t } } { R }_{ MAX }\quad =\quad \frac { { R }_{ MAX } }{ 1-\gamma  }$
+        * $\le \sum \_{ t=0 }^{ \infty  }{ { \gamma  }^{ t } } { R }\_{ MAX }\quad =\quad \frac { { R }\_{ MAX } }{ 1-\gamma  }$
             - discounted --> geometric, infinite --> finite
             - gamma value means that at any given point in time, you only really have to think about what amounts to a finite distance. 
             - Think about Horizon!, sigularity
