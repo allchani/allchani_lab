@@ -6,13 +6,14 @@ mathjax : True
 
 ## Policies
 
-- ${ \prod  }^{ * }$ = $arg\max \_{ \prod   }{ \quad E } [\sum \_{ t=0 }^{ \infty  }{ { \gamma  }^{ t } } R({ S }\_{ t })\quad \|\quad \prod  ]$
-- ${ U }^{ \prod   }(s)\quad =\quad E[\sum \_{ t=0 }^{ \infty  }{ { \gamma  }^{ t } } R({ S }\_{ t })\quad \|\quad \prod  ,\quad s\_{ 0 }\quad =\quad s]$
+- ${ \prod  }^{ * }$ = $arg\max \_{ \prod   }{ \quad E } \[\sum \_{ t=0 }^{ \infty  }{ { \gamma  }^{ t } } R({ S }\_{ t })\quad \| \quad \prod  \]$
+- ${ U }^{ \prod   }(s)\quad =\quad E[\sum \_{ t=0 }^{ \infty  }{ { \gamma  }^{ t } } R({ S }\_{ t })\quad \| \quad \prod  ,\quad s\_{ 0 }\quad =\quad s]$
 - ${ \prod   }^{ * }(s)=arg\max \_{ a }{ \sum \_{ s' }{ T(s,a,s') U(s') }  }$
 - $U(s)=R(s) + \gamma \max \_{ a }{ \sum \_{ s' }{ T(s,a,s') U(s') }  }$
 - Bellman equation
 - [참고자료](http://sanghyukchun.github.io/76/) 
 
+------
 
 ## Finding Policies : Value iteration
 
