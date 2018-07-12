@@ -46,7 +46,8 @@ General observation about rewards and what makes the reinforcement learning MDP 
     + Without this infinite horizon assumtion, you loose this function of stationary in your policies.
 
 - Utility of Sequences
-    + We have been sort of implicitly discussing not just the rewards we get in a sigle state, but the rewards that we get through a sequences of states that we take.
+    + Utility : state s를 initial state로 두고 action을 policy π를 사용하여 고르게 되었을 때 우리가 얻게되는 reward의 expectation 값
+    + We have been sort of implicitly discussing not just the rewards we get in a single state, but the rewards that we get through a sequences of states that we take.
     + if U(S0, S1, S2...) > U(S0, S1', S2'...) then U(S1, S2...) > U(S1', S2'...)
         * stationarity of preferences. Even thoungh we don't have S0.
         * It will be the same, because all we're doing is adding the reward for S0. 
