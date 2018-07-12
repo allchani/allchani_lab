@@ -6,8 +6,12 @@ mathjax : True
 
 ## Policies
 
+- ${ \prod  }^{ \* } = arg\max \_{ \prod   }{ \quad E } \[\sum\_{ t=0 }^{ \infty  }{ { \gamma  }^{ t } } R({ S }\_{ t })\quad \| \quad \prod  \]$
+- ${ U }^{ \prod   }(s)\quad =\quad E\[\sum \_{ t=0 }^{ \infty  }{ { \gamma  }^{ t } } R({ S }\_{ t })\quad \| \quad \prod  ,\quad s\_{ 0 }\quad =\quad s\]$
+- ${ \prod   }^{ \* }(s)=arg\max \_{ a }{ \sum \_{ s' }{ T(s,a,s') U(s') }  }$
+- $U(s)=R(s) + \gamma \max \_{ a }{ \sum \_{ s' }{ T(s,a,s') U(s') }  }$
 - Bellman equation
-- [참고자료](http://sanghyukchun.github.io/76/) 
+- [참고자료](http://sanghyukchun.github.io/76/)
 
 ------
 
@@ -44,7 +48,7 @@ If we have a U that is not the correct utility, but say, has the ordering of the
 ## Let's find!! : Policy iteration
 
 - start with ${\Pi}\_{0}$ <-- guess
-- evaluate : given ${\Pi}\_{t}$ calculate ${U}\_{t} = { U }^{{\Pi}\_{t}}$
+- evaluate : given ${\Pi}\_{t}$ calculate ${U}\_{t} = { U }^{\Pi\_t}$
 - improve : ${\Pi}\_{t+1} = arg\max \_{ a } \sum { T(s,\quad a,\quad s') } { U }\_{ t }(s')$ 
 - $U(s)\quad =\quad R(s)\quad +\quad \gamma \sum \_{ s' }^{  }{ T(s,\quad { \Pi  }\_{ t }(s),\quad s'){ U }\_{ t }(s') }$
     + there is not max fuction so it is linear.
