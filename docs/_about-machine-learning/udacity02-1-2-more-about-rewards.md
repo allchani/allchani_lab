@@ -1,5 +1,5 @@
 ---
-title: "[Udacity02] 02. Smoov & Culry's Bogus Journey" 
+title: "[Udacity02] 1-2. Smoov & Culry's Bogus Journey" 
 excerpt: "More about Rewards and Sequences of Rewards"
 mathjax : True
 ---

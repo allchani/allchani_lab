@@ -1,5 +1,5 @@
 ---
-title: "[Udacity02] 04. Smoov & Culry's Bogus Journey" 
+title: "[Udacity02] 1-4. Smoov & Culry's Bogus Journey" 
 excerpt: "The Bellman Equation"
 mathjax : True
 ---

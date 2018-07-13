@@ -1,5 +1,5 @@
 ---
-title: "[Udacity02] 01. Smoov & Culry's Bogus Journey" 
+title: "[Udacity02] 1-1. Smoov & Culry's Bogus Journey" 
 excerpt: "Markov Decision Processes"
 mathjax : True
 ---

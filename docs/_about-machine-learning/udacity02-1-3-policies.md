@@ -1,5 +1,5 @@
 ---
-title: "[Udacity02] 03. Smoov & Culry's Bogus Journey" 
+title: "[Udacity02] 1-3. Smoov & Culry's Bogus Journey" 
 excerpt: "Policies"
 mathjax : True
 ---
