@@ -269,6 +269,9 @@ collections:
   about-machine-learning:
     output: true
     permalink: /:collection/:path/
+  about-datastructures-algorithm:
+    output: true
+    permalink: /:collection/:path/
 
 # Defaults
 defaults:
@@ -314,6 +317,18 @@ defaults:
       comments: true
       sidebar:
         nav: "about-machine-learning"
+  # _about-datastructures-algorithm
+  - scope:
+      path: ""
+      type: about-datastructures-algorithm
+    values:
+      layout: single
+      read_time: true
+      author_profile: true
+      share: true
+      comments: true
+      sidebar:
+        nav: "about-datastructures-algorithm"
 
   # _recipes
   - scope:
