@@ -53,4 +53,22 @@ mathjax : True
 - So if your sequence up there, instead of being S1, S2, S3, SF, had been S1, S2, S3, S1, SF. Then what would have happened is I would have seen the rewards that I saw, r1, r2, r3 and then some other reward that I would see. Let's call it r1 prime or something. 
 - I would be pretending as if I didn't already know something about state one, because I also saw it go from state one to state two, and saw a particular reward r1. I'd be ignoring that. 
 - So what this TD(1) update let's you do is, when you see S1 again, and sort of back up its value. You've actually captured the fact that last time you were in S1, you actually went to S2 and saw reward r1.
--  
+-  It's like the outcome-based on updates **now with extra learning or inside the episode learning**
+
+## Why TD(1) is "wrong"
+
+- Why is the outcome-based one even further off than the maximum likelihood?
+    + When we computed the outcome-based one, we basically only used one of the five trajectories to propagate information back.
+    + When we did the maximum likelihood estimate, we used information from all five of the trajectories. Even though we only encountered S2 once. 
+    + And so that's just more information and it's more accurate, and you would imagine that if I triple the amount of data the 6.6 would very quickly get closer to 3.9. And the 12 might not move at all if I never see S2 again.  
+
+
+
+- This TD(1) idea, it's not using all the data, it's using just individual runs.
+    + so when a rare thing happens on a run, you could end up with an estimate that's quite far off, and it could maybe stay that way for a long time. Whereas the maximum likelihood estimate seemed to push you in the direction of using the data that you've got to do the best you can.
+    + what this is pointing out is that maybe we don't want to just do TD(1). There's some nice thing about TD(1), but maybe we can shore up some of these other issues and come up with something even better.(without actually building an entire model)
+
+
+## TD(0) rule
+
+- 

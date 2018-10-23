@@ -90,7 +90,7 @@ return low - 1
         + Solution: augmented set of arrays : pointers back into the original arrays.
 
 - Summary
-    + The runtime of binary search is $\Theta (\log{ n }$
+    + The runtime of binary search is $\Theta (\log{ n })$
 
 ## Polynomial Multiplication
 ### Problem Overview and Naive Solution
@@ -143,7 +143,7 @@ Needs 3 multiplications
 - Theorem
 If T(n) = aT([n/b]) + O(n^d) (for constants a>0, b>1, d>=0), then:
 
-$$T(n)\quad =\quad \begin{cases} O({ n }^{ d })\quad \quad \quad \quad \quad \quad \quad if\quad d>\log \_{ b }{ a }  \\ O({ n }^{ d }\log { n } )\quad \quad \quad if\quad d=\log \_{ b }{ a }  \\ O({ n }^{ \log \_{ b }{ a }  })\quad \quad \quad \quad \quad if\quad d<\log \_{ b }{ a }  \end{cases}$$
+$$T(n)\quad =\quad \begin{cases} O({ n }^{ d })\quad \quad \quad \quad \quad \quad \quad if\quad d>\log\_{ b }{ a }  \\ O({ n }^{ d }\log { n } )\quad \quad \quad if\quad d=\log\_{ b }{ a }  \\ O({ n }^{ \log\_{ b }{ a }  })\quad \quad \quad \quad \quad if\quad d<\log\_{ b }{ a }  \end{cases}$$
 
 ### Proof of the Master Theorem?
 
@@ -240,7 +240,7 @@ return D
     + the worst-case running time of the algorithm (the number of comparisons made) is at least the depth d.
     + d >= $\log \_{2}{n}$ (or, equivalently, ${2}^{d} \ge l$)
     + Thus, the running time is at least
-    + $$\log \_{2}{n} = \Omega(nlog{n})$$
+    + $$\log\_{2}{n} = \Omega(nlog{n})$$
 
 - Lemma 
     + $\log \_{2}{n!} = \Omega(n\log{n})$
