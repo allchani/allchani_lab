@@ -88,6 +88,8 @@ return size
     + Unlike static arrays, dynamic arrays can be resized.
     + Appending a new element to a dynamic array is often constant time, but can take O(n).
     + Some space is wasted.
+
+
 ```
 What is the tightest correct upper bound on the running time of a PushBackPushBack operation on an dynamic array currently containing nn elements in the worst-case?
 
@@ -147,8 +149,8 @@ O(1).
 
 - Dynamic array: n calls to PushBack
 - Let $$\Phi(h) = 2xsize - capacity$$
-    + $$\Phi({h}\_{0}) = 2 x 0 - 0 = 0$$
-    + $$\Phi({h}\_{i}) = 2 x size - capacity > 0$$
+    + $$\Phi({h}\_{0}) = 2 \* 0 - 0 = 0$$
+    + $$\Phi({h}\_{i}) = 2 \* size - capacity > 0$$
     + (since size > capacity/2)
 
 - Dynamic Array Resizing
