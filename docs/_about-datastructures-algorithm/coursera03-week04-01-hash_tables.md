@@ -507,6 +507,33 @@ return hash
 
 ### Searching Patterns
 #### Search Pattern in Text
+
+- Searching for Patterns
+    + Given a text T(book, website, facebook profile) and a pattern P(word, pharase, sentence), find all occurrences of P in T.
+- Examples
+    + Your name on a website
+    + Twitter messages about your company
+    + Detect files infected by virus - code patterns
+
+- Substring Notation
+- Definition
+    + Denote by *S[i..j]* the substring of string *S* starting in position *i* and ending in position *j*.
+- Examples
+    + If S = "abcde", then
+    + S[0..4] = "abcde",
+    + S[1..3] = "bcd"
+    + S[2..2] = "c"
+
+- Find Pattern in Text
+    + Input: Strings T and P
+    + Output : 
+    + All such position *i* in *T*,
+    + 0 <= *i* <= \|T\|-\|P\| that
+    + T[i..i + \|P\|-1] = P
+
+
+
+
 #### Rabin-Karp's Algorithm
 #### Optimization: Precomputation
 #### Optimization: Implementation and Analysis
