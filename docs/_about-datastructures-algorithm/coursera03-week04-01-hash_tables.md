@@ -74,7 +74,7 @@ return IP[1]*2^24 + IP[2]*2^16 + IP[3]*2^8 + IP[4]
     + AccessedLastHour is O(1)
     + But need 2^32 memory even for few IPs
     + IPv6: 2^128 won't fit in memory
-    + In general: O(N) memory, N=|S|, where N is the size of our universe
+    + In general: O(N) memory, N=\|S\|, where N is the size of our universe
     + this method only works when the universe is somewhat small!
 
 #### List-based Mapping
@@ -125,7 +125,7 @@ return L.CountIP(IP)
     + Different values for different objects
     + Direct addressing with O(m) memory
     + Want small cardinality m
-    + Impossible to have all different values if number of objects |S| is more than m.
+    + Impossible to have all different values if number of objects \|S\| is more than m.
 
 - Collisions
 - Definition
@@ -331,7 +331,7 @@ L.Erase(O)
     + Few collisions
 
 - No Universal Hash Function
-    + Lemma: If number of possible keys is big(|U| >> m), for any hash function h there is bad input resulting in many collisions.
+    + Lemma: If number of possible keys is big(\|U\| >> m), for any hash function h there is bad input resulting in many collisions.
 
 #### Universal Family
 - Idea
@@ -437,15 +437,15 @@ if loadFactor > 0.9:
 
 - String Length Notation
 - Definition
-    + Denote by |S| the length of string S
+    + Denote by \|S\| the length of string S
 - Examples
-    + |"a"| = 1
-    + |"ab"| = 2
-    + |"abcde"| = 5
+    + \|"a"\| = 1
+    + \|"ab"\| = 2
+    + \|"abcde"\| = 5
 
 - Hashing Strings
     + Given a string  S, compute its hash value
-    + S =S[0]S[1]...S[|S|-1], where S[i] - individual characters
+    + S =S[0]S[1]...S[\|S\|-1], where S[i] - individual characters
     + We should use all the characters in the hash function
     + Otherwise there will be many collisions:
     + For example, if S[0] is not used, h("aa") = h("ba") = ... = h("za")
@@ -466,7 +466,7 @@ for i from |S|-1 down to 0:
 return hash
 ```
 
-- Example: |S|=3
+- Example: \|S\|=3
     + hash = 0
     + hash = S[2] mod p
     + hash = S[1] + S[2]x mod p
@@ -496,7 +496,7 @@ return hash
 
 - Running time
     + For big enough p again have c = O(1+alpha)
-    + Computing PolyHash(S) runs in time O(|S|)
+    + Computing PolyHash(S) runs in time O(\|S\|)
     + If lengths of the names in the phone book are bounded by constant L, computing h(S) takes O(L) = O(1) time
 
 - Conclusion
@@ -531,12 +531,146 @@ return hash
     + 0 <= *i* <= \|T\|-\|P\| that
     + T[i..i + \|P\|-1] = P
 
+- Naive Algorithm
+    + For each position *i* from 0 to \|T\| - \|P\|, check character-by-character whether T[i..i + \|P\| - 1] = P or not
+    + If yes, append *i* to the result.
 
+```
+AreEqual(S_1,S_2)
+if |S_1| != |S_2|:
+    return False
+for i from 0 to |S_1|-1:
+    if S_1[i] != S_2[i]:
+        return False
+return True
+```
 
+```
+FindPatternNaive(T,P):
+result <-- empth list
+for i from 0 to |T|-|P|:
+    if AreEqual(T[i..i+|P|-1], P):
+        result.Append(i)
+return result
+```
+
+Running Time
+- Lemma
+    + Running time of FindPatternNaive(T,P) is O(\|T\|\|P\|).
+- Proof
+    + Each AreEqual call is O(\|P\|)
+    + \|T\|-\|P\|+1 calls of AreEqual total to O((\|T\|-\|P\|+1)\|P\|) = O(\|T\|\|P\|)
+
+- Bad Example
+    + If T="aaa...aa" and P="aaa...ab", and \|T\|>>\|P\|, then for each position *i* in *T* from 0 to \|T\|-\|P\| the call to AreEqual has to make all \|P\| comparisons.
+    + This is because T[i..i+\|P\|-1] and P differ only in the last character.
+    + Thus, in this case the naive algorithm runs in time $\Theta(\|T\|\|P\|)$.
 
 #### Rabin-Karp's Algorithm
+
+- Need to compare P with all substrings S of T of length \|P\|
+- Idea: use hashing to quickly compare P with substrings of T
+  
+- If h(P) != h(S), then definitely P != S
+- If h(P) = h(S), call AreEqual(P,S)
+- Use polynomial hash family P_p with prime p
+- If P != S, the probability Pr[h(P)=h(S)] is at most \|P\|/p for polynomial hashing
+
+```
+RabinKarp(T,P):
+p <-- big prime, x <-- random(1, p-1)
+result <-- empty list
+pHash <-- PolyHash(P,p,x)
+for i from 0 to |T|-|P|:
+    tHash <-- PolyHash(T[i..i+|P|-1],p,x)
+    if pHash != tHash:
+        continue
+    if AreEqual(T[i..i+|P|-1], P):
+        result.Append(i)
+return result
+```
+
+- False Alarms
+    + "False alarm" is the event when P is compared with T[i..i+|P|-1], but P != T[i..i+|P|-1]
+    + The probability of "false alarm" is at most \|P\|/p
+    + On average, the total number of "false alarms" will be (\|T\|-\|P\|+1)\|P\|/p, which can be made small by selecting p >> \|T\|\|P\|
+
+- Running Time without AreEqual
+    + h(P) is computed in O(\|P\|)
+    + h(T[i..i+\|P\|-1]) is computed in O(\|P\|), \|T\|-\|P\|+1 times
+    + O(\|P\|)+O((\|T\|-\|P\|+1)\|P\|) = O(\|T\|\|P\|)
+
+- AreEqual Running Time
+    + AreEqual is computed in O(\|P\|)
+    + AreEqual is called only when h(P) = h(T[i..i+|P|-1]), meaning that either an occurence of P is found or a "false alarm" happened.
+    + By selecting p >> \|T\|\|P\| we make the number of "false alarms" negligible
+
+- Total Running Time
+    + If P is found q times in T, then total time spent in AreEqual is O((q+(\|T\|-\|P\|+1)*\|P\|/p)\|P\|) = O(q\|P\|) for p >> \|T\|\|P\|
+    + Total running time is O(\|T\|\|P\|) + O(q\|P\|) = O(\|T\|\|P\|) as q <= \|T\|
+    + Same as naive algorithm, but can be improved!
+
 #### Optimization: Precomputation
+
+![Improving Running Time]({{ site.url }}{{ site.baseurl }}/assets/images/improving.png)
+{: .image-center}
+
+![Consecutive substrings]({{ site.url }}{{ site.baseurl }}/assets/images/consecutive_substrings.png)
+{: .image-center}
+
+![Recurrence of hashes]({{ site.url }}{{ site.baseurl }}/assets/images/recurrence_of_hashes.png)
+{: .image-center}
+
+```
+PrecomputeHashes(T,|P|,p,x):
+H <-- array of length |T|-|P|+1
+S <-- T[|T|-|P|..|T|-1]
+H[|T|-|P|] <-- PolyHash(S,p,x)
+y <-- 1
+for i from 1 to |P|:
+    y <-- (y*x) mod p
+for i from |T|-|P|-1 down to 0:
+    H[i] <-- (xH[i+1]+T[i]-yT[i+|P|]) mod p
+return H
+```
+
+- Precomputing H
+    + PolyHash is called once - O(\|P\|)
+    + First for loop runs in O(\|P\|)
+    + Second for loop runs in O(\|T\|-\|P\|)
+    + Total precomputation time O(\|T\|+\|P\|)
+
 #### Optimization: Implementation and Analysis
+
+```
+RabinKarp(T,P):
+p <-- big prime, x <-- random(1, p-1)
+result <-- empty list
+pHash <-- PolyHash(P,p,x)
+H <-- PrecomputeHashes(T,|P|,p,x)
+for i from 0 to |T|-|P|:
+    if pHash != H[i]:
+        continue
+    if AreEqual(T[i..i+|P|-1], P):
+        result.Append(i)
+return result
+```
+
+- Improved Running Time
+    + h(P) is computed in O(\|P\|)
+    + PrecomputeHashes runs in O(\|T\|+\|P\|)
+    + Total time spent in AreEqual is O(q\|P\|) on average where q is the number of occurrences of P in T
+    + Average running time
+    + O(\|T\| + (q+1)\|P\|)
+    + Usually q is small, so this is much less than O(\|T\|\|P\|)
+
+- Conclusion
+    + Hash tables are useful for storing Sets and Maps
+    + Possible to search and modify hash tables in O(1) on average!
+    + Must use good hash families and randomization
+    + Hashes are also useful while working with strings and texts
+    + There are many more applications in distributed systems and data science.
+
 ### Distributed Hash Tables
 #### Instant Uploads and Storage Optimization in Dropbox
 #### Distributed Hash Tables
